@@ -1,0 +1,63 @@
+// ─── TRUE TONES DESIGN TOKENS ───────────────────────────────────────────────
+// All colours, spacing, and type tokens live here.
+// Import via `@use "@/assets/styles/variables" as *;` (auto-injected by Vite)
+
+// Colour palette
+$terracotta:       #A0522D;
+$terracotta-light: #C1784F;
+$terracotta-pale:  #E8C5A8;
+$cream:            #F9F4EE;
+$cream-dark:       #EFE6D8;
+$sage:             #8A9E8C;
+$sage-light:       #C4D3C5;
+$dark:             #2A1F1A;
+$mid:              #6B5044;
+$muted:            #9A7B6B;
+$white:            #FFFFFF;
+
+// CSS custom properties (consumed globally in components via var(--*))
+:root {
+  --terracotta:       #{$terracotta};
+  --terracotta-light: #{$terracotta-light};
+  --terracotta-pale:  #{$terracotta-pale};
+  --cream:            #{$cream};
+  --cream-dark:       #{$cream-dark};
+  --sage:             #{$sage};
+  --sage-light:       #{$sage-light};
+  --dark:             #{$dark};
+  --mid:              #{$mid};
+  --muted:            #{$muted};
+  --white:            #{$white};
+  --nav-h:            80px;
+
+  // Typography
+  --font-base: "General Sans", sans-serif;
+}
+
+// Typography mixins
+@mixin display($size: 56px, $weight: 400) {
+  font-family: var(--font-base);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.1;
+}
+
+@mixin body-text($size: 20px, $weight: 400) {
+  font-family: var(--font-base);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.8;
+}
+
+@mixin label($spacing: 0.22em) {
+  font-family: var(--font-base);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: $spacing;
+  text-transform: uppercase;
+}
+
+// Breakpoints
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 480px;

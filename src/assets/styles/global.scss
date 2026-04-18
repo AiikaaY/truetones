@@ -1,0 +1,165 @@
+/* ─── GENERAL SANS via Fontshare CDN ─────────────────────────────────────── */
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600&display=swap");
+
+/* ─── RESET ──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── SCROLLBAR ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar            { width: 4px; }
+::-webkit-scrollbar-track      { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb      { background: var(--terracotta); border-radius: 99px; }
+
+/* ─── SHARED SECTION SPACING ─────────────────────────────────────────────── */
+section {
+  padding: 100px 7%;
+}
+
+/* ─── SECTION META ───────────────────────────────────────────────────────── */
+.section-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 16px;
+
+  &::after {
+    content: "";
+    flex: 0 0 32px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--light {
+    color: var(--terracotta-pale);
+  }
+}
+
+.section-title {
+  font-family: var(--font-base);
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--dark);
+  letter-spacing: -0.01em;
+
+  em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--terracotta);
+  }
+
+  &--light {
+    color: var(--white);
+    em { color: var(--terracotta-pale); }
+  }
+
+  &--center { text-align: center; }
+}
+
+/* ─── SHARED BUTTONS ─────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--terracotta);
+  color: var(--white);
+  padding: 15px 32px;
+  text-decoration: none;
+  font-family: var(--font-base);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    background: var(--terracotta-light);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--white);
+    fill: none;
+    stroke-width: 1.5;
+  }
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--terracotta);
+  color: var(--terracotta);
+  padding: 15px 32px;
+  text-decoration: none;
+  font-family: var(--font-base);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    background: var(--terracotta);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+}
+
+/* ─── FADE-UP ANIMATION ──────────────────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── RESPONSIVE SECTION PADDING ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  section { padding: 70px 5%; }
+  :root  { --nav-h: 64px; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 60px 5%; }
+}
