@@ -22,7 +22,6 @@ const root = ref(null)
 
 const stats = [
   { num: '500', sup: '+',  label: 'Clients Served'      },
-  { num: '7',   sup: '',   label: 'Specialised Services' },
   { num: '98',  sup: '%',  label: 'Client Satisfaction'  },
   { num: '1',   sup: ':1', label: 'Personalised Care'    }
 ]
@@ -35,7 +34,7 @@ onMounted(() => observe(root.value))
   background: var(--dark);
   padding: 56px 7%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px;
 }
 
@@ -70,7 +69,7 @@ onMounted(() => observe(root.value))
 
 @media (max-width: 768px) {
   .stats-strip {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 48px 5%;
   }
 }

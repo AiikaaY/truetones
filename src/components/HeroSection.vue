@@ -10,13 +10,11 @@
       </h1>
 
       <p class="hero__body fade-up">
-        Expert skincare guidance rooted in science and care. Dr Oghosa combines
-        dermatologist-approved protocols with a personalised approach — because
-        your skin deserves more than guessworks.
+        Experience expert skincare guidance rooted in science and care. Dr Oghosa combines dermatologist-approved protocols with a personalised approach because your skin deserves more than guessworks.
       </p>
 
       <div class="hero__btns fade-up">
-        <a :href="waLink" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <a href="#packages" class="btn-primary" @click.prevent="scrollToPackages">
           Book a Consultation
           <svg viewBox="0 0 16 16" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
@@ -29,7 +27,7 @@
     <!-- Right image -->
     <div class="hero__right" aria-hidden="true">
       <img
-        src="/images/hero_image.png"
+        src="/images/hero_image.jpeg"
         alt="Dr Oghosa — True Tones Skin Therapist"
         loading="eager"
       />
@@ -59,6 +57,11 @@ const waLink    = directLink()
 const heroLeft  = ref(null)
 
 onMounted(() => observe(heroLeft.value))
+
+function scrollToPackages() {
+  const el = document.getElementById('packages')
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 </script>
 
 <style scoped lang="scss">

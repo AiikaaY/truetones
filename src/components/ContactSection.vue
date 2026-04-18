@@ -38,7 +38,7 @@
     </div>
 
     <!-- Right — booking form -->
-    <div class="contact__right fade-up">
+    <div id="booking-form" class="contact__right fade-up">
       <h3 class="contact__form-heading">Book a Consultation</h3>
       <p class="contact__form-sub">
         Fill in your details and we'll reach out via WhatsApp to confirm your appointment.

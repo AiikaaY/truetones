@@ -25,9 +25,7 @@
         :class="{ 'service-card--wide': svc.wide }"
         role="listitem"
       >
-        <span class="service-card__num" aria-hidden="true">
-          {{ String(i + 1).padStart(2, '0') }}
-        </span>
+
 
         <!-- SVG icon slot -->
         <div class="service-card__icon" aria-hidden="true" v-html="svc.icon" />
@@ -156,15 +154,6 @@ const services = [
   }
 }
 
-.service-card__num {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: var(--terracotta);
-  margin-bottom: 20px;
-  display: block;
-  transition: color 0.35s ease;
-}
 
 .service-card__icon {
   color: var(--terracotta);

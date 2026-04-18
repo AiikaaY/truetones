@@ -27,9 +27,8 @@
       </blockquote>
 
       <p class="about__body fade-up">
-        Dr Oghosa is a dedicated skin therapist with a passion for helping
-        people — especially those with melanin-rich skin — achieve healthy,
-        radiant skin through personalised, evidence-based care.
+        Dr Oghosa is a medical doctor and the founder of True Tones, a skincare consultancy grounded in clinical expertise and a deliberate, highly personalised approach to skin health.
+        With a foundation in medicine and a meticulous understanding of skin physiology, she approaches skincare with the precision of clinical practice.
       </p>
 
       <p class="about__body fade-up">
@@ -38,10 +37,6 @@
         consultation, a custom skin plan, and continuous support throughout
         their journey to clear skin.
       </p>
-
-      <ul class="about__credentials fade-up" aria-label="Credentials">
-        <li v-for="c in credentials" :key="c" class="credential-pill">{{ c }}</li>
-      </ul>
 
       <button class="btn-primary fade-up" @click="scrollToContact">
         Book with Dr Oghosa
@@ -62,15 +57,8 @@ const { observe } = useScrollAnimation()
 const root        = ref(null)
 
 function scrollToContact() {
-  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })
 }
-
-const credentials = [
-  'Certified Skin Therapist',
-  'Dermatology-Trained',
-  'Melanin Skin Specialist',
-  'Prescription Authority'
-]
 
 onMounted(() => observe(root.value))
 </script>

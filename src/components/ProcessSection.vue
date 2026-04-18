@@ -11,7 +11,7 @@
       </p>
     </div>
 
-    <ol class="process__steps" aria-label="Consultation packages">
+    <ol id="packages" class="process__steps" aria-label="Consultation packages">
       <li
         v-for="(step, i) in steps"
         :key="step.title"
