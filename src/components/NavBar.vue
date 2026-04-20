@@ -13,7 +13,7 @@
         <a :href="link.href" class="navbar__link">{{ link.label }}</a>
       </li>
       <li>
-        <a :href="waLink" target="_blank" rel="noopener noreferrer" class="navbar__link navbar__cta">
+        <a href="#booking-form" class="navbar__link navbar__cta">
           Book Now
         </a>
       </li>
@@ -50,9 +50,7 @@
           </a>
         </nav>
         <a
-          :href="waLink"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#booking-form"
           class="mobile-menu__cta"
           @click="mobileOpen = false"
         >
@@ -68,8 +66,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useWhatsApp } from '@/composables/useWhatsApp'
 
-const { directLink } = useWhatsApp()
-const waLink        = directLink()
+// const { directLink } = useWhatsApp()
+// const waLink        = directLink()
 const isScrolled    = ref(false)
 const mobileOpen    = ref(false)
 
